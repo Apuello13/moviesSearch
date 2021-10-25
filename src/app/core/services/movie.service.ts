@@ -3,7 +3,9 @@ import { Injectable } from "@angular/core";
 import { catchError } from 'rxjs/operators';
 //ENVIROMENTS
 import { environment } from '../../../environments/environment';
+//MODEL
 import { Movie } from "../models/movie";
+//ERROR
 import { HandleHttpError } from "../utils/HandleHttpError";
 
 @Injectable({ providedIn: 'root' })

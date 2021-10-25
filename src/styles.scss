@@ -1,5 +1,7 @@
 @import "./assets/_scss/colores.scss";
 @import "./assets/_scss/fonts.scss";
+@import "./assets/_scss/responsive.scss";
+
 *{
     margin: 0;
     padding: 0;
@@ -10,6 +12,7 @@ body {
     color: $pale_blue;
     font-size: $body_size;
     font-family: $family;
+    padding: 7rem 0 !important;
 }
 
 //GLOBAL
@@ -58,6 +61,10 @@ body {
 
 .p-1{
     padding: 1rem;
+}
+
+.pt-3{
+    padding-top: 3rem !important;
 }
 
 .btn{
@@ -113,4 +120,14 @@ input::placeholder{
 
 .btn:hover{
     background: $violet;
+}
+
+//RESPONSIVE
+@media (max-width : $mobile){
+    .container{
+        padding: 0 0.5rem !important;
+        input{
+            width: 80%;
+        }
+    }
 }
