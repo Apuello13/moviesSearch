@@ -1,0 +1,26 @@
+<div class="card mt-1 border">
+    <div class="text-center" *ngIf="movie.Error; else elseBlock">
+        {{ movie.Error }}
+    </div>
+    <ng-template #elseBlock>
+        <div class="p-1 text-start">
+            <div class="flex justify-content-between align-items-center">
+                <h5>Title: {{ movie.Title }}</h5>
+                <h5>Year: {{ movie.Year }}</h5>
+            </div>
+            <div class="flex justify-content-between align-items-center mt-1">
+                <h5>Director: {{ movie.Director }}</h5>
+                <h5>Writer: {{ movie.Writer }}</h5>
+            </div>
+            <div class="flex justify-content-between align-items-center mt-1">
+                <h5>Genre: {{ movie.Genre }}</h5>
+                <h5>Language: {{ movie.Language }}</h5>
+            </div>
+            <div class="flex justify-content-between align-items-center mt-1">
+                <h5>Type: {{ movie.Type }}</h5>
+                <h5>Country: {{ movie.Country }}</h5>
+            </div>
+            <h5 class="mt-1">Actors: {{ movie.Actors }}</h5>
+        </div>
+    </ng-template>
+</div>

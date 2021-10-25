@@ -1,1 +1,116 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/_scss/colores.scss";
+@import "./assets/_scss/fonts.scss";
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: $very_dark_blue;
+    color: $pale_blue;
+    font-size: $body_size;
+    font-family: $family;
+}
+
+//GLOBAL
+.card {
+    background: $dark_blue;
+    padding: 1rem 0.5rem;
+    height: auto;
+}
+
+
+.container_search{
+    background: $dark_blue;
+    padding: 0.5rem 1rem;
+
+    input{
+        background: transparent;
+        height: 1rem;
+        border: 0;
+        width: 20rem;
+        color: $pale_blue;
+        font-family: $family;
+        font-size: 1rem;
+    }
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-start{
+    text-align: start;
+}
+
+.title{
+    text-transform: uppercase;
+    color: $soft_blue;
+}
+
+.mt-1{
+    margin-top: 1rem;
+}
+
+.mb-1{
+    margin-bottom: 1rem;
+}
+
+.p-1{
+    padding: 1rem;
+}
+
+.btn{
+    background: $blue;
+    color: $pale_blue;
+    padding: 1rem 0.5rem;
+    width: 7rem;
+}
+
+.border{
+    border: 1px solid $dark_blue;
+    border-radius: 0.5rem;
+}
+
+//FLEX
+.flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-around{
+    justify-content: space-around;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+//END FLEX
+
+.h-100 {
+    height: 100vh;
+}
+
+//EVENTS
+input:focus{
+    outline: none;
+}
+
+input::placeholder{
+    color: $pale_blue;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: $violet;
+}

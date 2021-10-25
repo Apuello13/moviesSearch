@@ -1,0 +1,12 @@
+<div class="flex h-100 align-items-center justify-content-center">
+    <div class="container">
+        <h1 class="title mb-1">Movie Search</h1>
+        <div class="container_search border flex align-items-center justify-content-between">
+            <i class='bx bx-search-alt' style="margin-right: 5px;"></i>
+            <input type="text" placeholder="Search a movie..." [(ngModel)]="name"
+                (keyup.enter)="search()">
+            <button class="btn border pointer" (click)="search()">Buscar</button>
+        </div>
+        <app-grid *ngIf="movie" [movie]="movie"></app-grid>
+    </div>
+</div>

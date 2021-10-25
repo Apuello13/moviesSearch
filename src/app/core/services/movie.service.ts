@@ -1,0 +1,17 @@
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { catchError } from 'rxjs/operators';
+//ENVIROMENTS
+import { environment } from '../../../environments/environment';
+import { Movie } from "../models/movie";
+import { HandleHttpError } from "../utils/HandleHttpError";
+
+@Injectable({ providedIn: 'root' })
+export class MovieService{
+    constructor(private http : HttpClient){}
+
+    getMovieByName(name : string){
+        return this.http.get<Movie>(`${environment.apiUrl}t=${name}&apikey=${environment.apiKey}`)
+            .pipe(catchError(HandleHttpError));
+    }
+}
